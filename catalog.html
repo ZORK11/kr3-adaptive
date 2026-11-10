@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Учебный интернет-магазин">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <meta property="og:image" content="https://username.github.io/kr3-responsive-shop/images/preview.jpg">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Каталог товаров учебного интернет-магазина.">
+  <title>Каталог товаров — Учебный интернет-магазин</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">VipShaurma</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__current">Каталог</span>
+    </nav>
+
+    <section class="section">
+      <h1>Каталог товаров</h1>
+      <p>Учебный каталог товаров с фильтрами и адаптивной сеткой карточек.</p>
+    </section>
+
+    <section class="catalog-layout">
+      <aside class="catalog-filters">
+        <h2>Фильтры</h2>
+
+        <form class="filters-form" action="#" method="get">
+          <fieldset>
+            <legend>Категория</legend>
+
+            <label>
+              <input type="checkbox" name="category" value="all">
+              Все товары
+            </label>
+            <label>
+              <input type="checkbox" name="category" value="popular">
+              Популярные
+            </label>
+            <label>
+              <input type="checkbox" name="category" value="new">
+              Новинки
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Цена</legend>
+
+            <label for="price-from">От</label>
+            <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
+
+            <label for="price-to">До</label>
+            <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+          </fieldset>
+
+          <button class="button button--primary" type="submit">Применить</button>
+        </form>
+      </aside>
+
+      <section class="catalog-products">
+        <h2>Список товаров</h2>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <img
+              class="product-card__image"
+              src="https://images.gastronom.ru/iGE7Ep63_qPp3ulovbwQhDh5KOnzTTJJTgLrWIMCrr0/pr:product-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzk2NzBmMmMzLTdjZTYtNGMzZC04NGNjLTQzMjAwNWQ1Nzc2Yi5qcGc.webp"
+              srcset="https://images.gastronom.ru/iGE7Ep63_qPp3ulovbwQhDh5KOnzTTJJTgLrWIMCrr0/pr:product-cover-image/g:ce/rs:auto:0:0:0/L2Ntcy9hbGwtaW1hZ2VzLzk2NzBmMmMzLTdjZTYtNGMzZC04NGNjLTQzMjAwNWQ1Nzc2Yi5qcGc.webp 640w"
+              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+              alt="Шаурма с курицей в лаваше"
+              width="640" height="480" loading="lazy">
+            <h3 class="product-card__title">Шаурма с курицей</h3>
+            <p class="product-card__description">Дефолтная, нормисная шаурма</p>
+            <p class="product-card__price">Цена: 250 руб.</p>
+            <a class="button button--primary" href="product.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img
+              class="product-card__image"
+              src="https://шашлыкдаром73.рф/wp-content/uploads/2022/11/Свинина-в-лаваше-768x516.jpg"
+              srcset="https://шашлыкдаром73.рф/wp-content/uploads/2022/11/Свинина-в-лаваше-768x516.jpg 768w"
+              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+              alt="Шашлык из свинины в лаваше"
+              width="640" height="480" loading="lazy">
+            <h3 class="product-card__title">Шашлык в лаваше</h3>
+            <p class="product-card__description">Уже для прошаренных смешариков</p>
+            <p class="product-card__price">Цена: 300 руб.</p>
+            <a class="button button--primary" href="product_2.html">Подробнее</a>
+          </article>
+
+          <article class="product-card">
+            <img
+              class="product-card__image"
+              src="https://thecity.m24.ru/b/d/SYketSivfYE0IffObLLBFlFNGhtudTX-kYVfOS8Xp1Gj5pqKzWTJSFS-PsArI08gRZaK1yZktQXWesHOaOz7FWcJ5xZMng=H83L15SjaKQIsgSsejoTUg.jpg"
+              srcset="https://thecity.m24.ru/b/d/SYketSivfYE0IffObLLBFlFNGhtudTX-kYVfOS8Xp1Gj5pqKzWTJSFS-PsArI08gRZaK1yZktQXWesHOaOz7FWcJ5xZMng=H83L15SjaKQIsgSsejoTUg.jpg 640w"
+              sizes="(max-width: 767px) 100vw, (max-width: 1023px) 50vw, 33vw"
+              alt="Кюфта с овощами и хлебом"
+              width="640" height="480" loading="lazy">
+            <h3 class="product-card__title">Кюфта</h3>
+            <p class="product-card__description">Шедевральное сочетание люля-кебаба, хлеба и овощей.</p>
+            <p class="product-card__price">Цена: 350 руб.</p>
+            <a class="button button--primary" href="product_3.html">Подробнее</a>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+</body>
+</html>
